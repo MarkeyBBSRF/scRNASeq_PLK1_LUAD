@@ -175,7 +175,7 @@ DimPlot(immune,
         group.by = "sample")
 dev.off()
 
-p_heat = DoHeatmap(immune, features = genes_to_check$gene, raster = T) + NoLegend() + theme(text = element_text(size = 20))
+p_heat = DoHeatmap(immune, features = genes_to_check$gene, raster = T) + theme(text = element_text(size = 20))
 ggsave(
   file.path(figs1dir, "heatmap.pdf"),
   p_heat + theme(text = element_text(size = 10)),
